@@ -3,72 +3,81 @@ import java.awt.*;
 
 class Dot {
     private JFrame frame;
-    private int positionX, positionY, velocityX, velocityY, accelerationX, accelerationY;
+    private Pair<Integer, Integer> position, velocity, acceleration;
     private Color dotColor;
     private Painter painter;
 
     Dot(JFrame frame) {
         this.frame = frame;
-        this.positionX = frame.getWidth() / 2;
-        this.positionY = frame.getHeight() / 2;
-        this.velocityX = 0;
-        this.velocityY = 0;
-        this.accelerationX = 0;
-        this.accelerationY = 0;
+        this.position = new Pair<>(frame.getWidth() / 2, frame.getHeight() / 2);
+        this.velocity = new Pair<>(0, 0);
+        this.acceleration = new Pair<>(0, 0);
         this.dotColor = Color.black;
         painter = new Painter();
     }
 
     // Begin Getters
     public int getPositionX() {
-        return positionX;
+        return position.x();
     }
 
     public int getPositionY() {
-        return positionY;
+        return position.y();
     }
 
+    public Pair getPosition() { return position; }
+
     public int getVelocityX() {
-        return velocityX;
+        return velocity.x();
     }
 
     public int getVelocityY() {
-        return velocityY;
+        return velocity.y();
     }
 
+    public Pair getVelocity() { return velocity; }
+
     public int getAccelerationX() {
-        return accelerationX;
+        return acceleration.x();
     }
 
     public int getAccelerationY() {
-        return accelerationY;
+        return acceleration.y();
     }
+
+    public Pair getAcceleration() { return acceleration; }
     // End Getters
 
     // Begin Setters
     public void setPositionX(int position) {
-        this.positionX = position;
+        this.position.setX(position);
     }
 
     public void setPositionY(int position) {
-        this.positionY = position;
+        this.position.setY(position);
     }
 
+    public void setPosition(Pair position) { this.position = position; }
+
     public void setVelocityX(int velocity) {
-        this.velocityX = velocity;
+        this.velocity.setY(velocity);
     }
 
     public void setVelocityY(int velocity) {
-        this.velocityY = velocity;
+        this.velocity.setY(velocity);
     }
 
+    public void setVelocity(Pair velocity) { this.velocity = velocity; }
+
     public void setAccelerationX(int acceleration) {
-        this.accelerationX = acceleration;
+        this.acceleration.setX(acceleration);
     }
 
     public void setAccelerationY(int acceleration) {
-        this.accelerationY = acceleration;
+        this.acceleration.setY(acceleration);
     }
+
+    public void setAcceleration(Pair acceleration) { this.acceleration = acceleration; }
     // End Setters
 
     public void drawDot() {
