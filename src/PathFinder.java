@@ -1,14 +1,18 @@
 import java.awt.Dimension;
-
+import java.awt.Point;
 import javax.swing.*;
 
 class PathFinder {
     static JFrame frame = new JFrame("PathFindingAI");
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         displayWindow();
-        Dot dot = new Dot();
-        dot.drawDot(frame);
+        Dot dot = new Dot(frame);
+        dot.drawDot();
+        while(true){
+            dot.moveDot();
+            Thread.sleep(100);
+        }
     }
 
     private static void displayWindow() {
