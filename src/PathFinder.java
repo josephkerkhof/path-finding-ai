@@ -1,5 +1,4 @@
 import java.awt.Dimension;
-import java.util.Random;
 import javax.swing.*;
 
 class PathFinder {
@@ -7,17 +6,14 @@ class PathFinder {
 
     public static void main(String[] args) throws InterruptedException {
         displayWindow();
+
         Dot dot = new Dot(frame);
         dot.drawDot();
-        Random random = new Random();
 
-        while(true){
-            int max = 5;
-            int min = -5;
-            int nextAccelerationX = random.nextInt((max - min) + 1) + min;
-            int nextAccelerationY = random.nextInt((max - min) + 1) + min;
+        Brain brain = new Brain(400);
 
-            dot.moveDot(nextAccelerationX, nextAccelerationY);
+        for(int i=0; i<brain.directions.length; i++){
+            dot.moveDot(brain.directions[i].x(), brain.directions[i].y());
             Thread.sleep(100);
         }
     }
