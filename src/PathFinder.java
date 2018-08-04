@@ -1,5 +1,5 @@
 import java.awt.Dimension;
-import java.awt.Point;
+import java.util.Random;
 import javax.swing.*;
 
 class PathFinder {
@@ -9,8 +9,15 @@ class PathFinder {
         displayWindow();
         Dot dot = new Dot(frame);
         dot.drawDot();
+        Random random = new Random();
+
         while(true){
-            dot.moveDot();
+            int max = 5;
+            int min = -5;
+            int nextAccelerationX = random.nextInt((max - min) + 1) + min;
+            int nextAccelerationY = random.nextInt((max - min) + 1) + min;
+
+            dot.moveDot(nextAccelerationX, nextAccelerationY);
             Thread.sleep(100);
         }
     }

@@ -53,14 +53,30 @@ class Dot {
     public void setPositionY(int position) {
         this.positionY = position;
     }
+
+    public void setVelocityX(int velocity) {
+        this.velocityX = velocity;
+    }
+
+    public void setVelocityY(int velocity) {
+        this.velocityY = velocity;
+    }
+
+    public void setAccelerationX(int acceleration) {
+        this.accelerationX = acceleration;
+    }
+
+    public void setAccelerationY(int acceleration) {
+        this.accelerationY = acceleration;
+    }
     // End Setters
 
     public void drawDot() {
         frame.getContentPane().add(painter);
     }
 
-    public void moveDot(){
-        painter.move();
+    public void moveDot(int accelerationX, int accelerationY){
+        painter.move(accelerationX, accelerationY);
     }
 
     private class Painter extends JPanel {
@@ -70,11 +86,26 @@ class Dot {
             g.drawOval(getPositionX(), getPositionY(), 5, 5);
         }
 
-        public void move() {
-            int newX = getPositionX() + 1;
-            int newY = getPositionY() + 1;
-            setPositionX(newX);
-            setPositionY(newY);
+        public void move(int accelerationX, int accelerationY) {
+            int newVelocityX = getVelocityX() + accelerationX;
+            int newVelocityY = getVelocityY() + accelerationY;
+
+            // limiting the velocity to 5
+            if(newVelocityX >=5) {
+                newVelocityX = 5;
+            }
+
+            if(newVelocityY >=5) {
+                newVelocityY = 5;
+            }
+
+            setVelocityX(newVelocityX);
+            setVelocityY(newVelocityY);
+
+            int newPositionX = getPositionX() + newVelocityX;
+            int newPositionY = getPositionY() + newVelocityY;
+            setPositionX(newPositionX);
+            setPositionY(newPositionY);
 
             repaint();
         }
