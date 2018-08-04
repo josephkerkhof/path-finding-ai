@@ -1,15 +1,54 @@
-import java.util.Vector;
+import javax.swing.*;
+import java.awt.*;
 
 class Dot {
-    Vector position;
-    Vector velocity;
-    Vector acceleration;
-
-    int width, height = 800;
+    private int positionX, positionY, velocityX, velocityY, accelerationX, accelerationY;
+    private Color dotColor;
+    int canvasWidth = 800, canvasHeight = 800;
 
     Dot() {
-        position = new Vector<>(width / 2, height / 2);
-        velocity = new Vector<>(0, 0);
-        acceleration = new Vector<>(0, 0);
+        this.positionX = canvasWidth / 2;
+        this.positionY = canvasHeight / 2;
+        this.velocityX = 0;
+        this.velocityY = 0;
+        this.accelerationX = 0;
+        this.accelerationY = 0;
+        this.dotColor = Color.black;
+    }
+
+    public int getPositionX(){
+        return positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public int getVelocityX() {
+        return velocityX;
+    }
+
+    public int getVelocityY() {
+        return velocityY;
+    }
+
+    public int getAccelerationX() {
+        return accelerationX;
+    }
+
+    public int getAccelerationY() {
+        return accelerationY;
+    }
+
+    public void drawDot(JFrame frame) {
+        frame.getContentPane().add(new Component());
+    }
+
+    private class Component extends JComponent{
+        public void paint(Graphics g){
+            g.setColor(dotColor);
+            g.fillOval(getPositionX(), getPositionY(), 5, 5);
+            g.drawOval(getPositionX(), getPositionY(), 5, 5);
+        }
     }
 }
