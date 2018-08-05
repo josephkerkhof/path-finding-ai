@@ -8,14 +8,6 @@ class PathFinder {
         displayWindow();
 
         Dot dot = new Dot(frame);
-        dot.drawDot();
-
-        Brain brain = new Brain(400);
-
-        for(int i=0; i<brain.directions.length; i++){
-            dot.moveDot(brain.directions[i].x(), brain.directions[i].y());
-            Thread.sleep(100);
-        }
     }
 
     private static void displayWindow() {
