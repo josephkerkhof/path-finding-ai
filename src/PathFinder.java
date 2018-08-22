@@ -23,15 +23,21 @@ class PathFinder extends JFrame {
         }
     }
 
-    public static void main(String[] args) {
-        int numberOfDots = 5;
-        int numberOfDirections = 400;
-
+    public static Dot[] makeDots(int numberOfDots, int numberOfDirections) {
         Dot[] dots = new Dot[numberOfDots];
 
         for(int i=0; i<numberOfDots; i++) {
             dots[i] = new Dot(numberOfDirections, 800, 800);
         }
+
+        return dots;
+    }
+
+    public static void main(String[] args) {
+        int numberOfDots = 5;
+        int numberOfDirections = 400;
+
+        dots = makeDots(numberOfDots, numberOfDirections);
 
         PathFinder pf = new PathFinder(dots);
     }
