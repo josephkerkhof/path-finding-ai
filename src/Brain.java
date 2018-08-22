@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Brain {
     public Pair<Integer, Integer>[] directions;
-    Random random = new Random();
-    int max = 5;
-    int min = -5;
+    private Random random = new Random();
+    private int max = 5;
+    private int min = -5;
 
     Brain(int numberOfDirections) {
         directions = new Pair[numberOfDirections];

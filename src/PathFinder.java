@@ -1,22 +1,38 @@
-import java.awt.Dimension;
+import java.awt.*;
 import javax.swing.*;
 
-class PathFinder {
-    static JFrame frame = new JFrame("PathFindingAI");
+class PathFinder extends JFrame {
+    static Dot[] dots;
 
-    public static void main(String[] args) throws InterruptedException {
-        displayWindow();
+    PathFinder(Dot[] dots) {
+        this.dots = dots;
 
-        Dot dot = new Dot(frame);
+        this.setPreferredSize(new Dimension(800, 800));
+        this.pack();
+        this.setVisible(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    private static void displayWindow() {
-        // Create and set up the window.
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setPreferredSize(new Dimension(800, 800));
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
 
-        // Display the window.
-        frame.pack();
-        frame.setVisible(true);
+        // Draws all the dots
+        for (Dot dot : dots) {
+            dot.drawDot(g);
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        int numberOfDots = 5;
+        int numberOfDirections = 400;
+
+        Dot[] dots = new Dot[numberOfDots];
+
+        for(int i=0; i<numberOfDots; i++) {
+            dots[i] = new Dot(numberOfDirections, 800, 800);
+        }
+
+        PathFinder pf = new PathFinder(dots);
     }
 }
