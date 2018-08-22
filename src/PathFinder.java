@@ -23,7 +23,7 @@ class PathFinder extends JFrame {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         int numberOfDots = 5;
         int numberOfDirections = 400;
 

@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.util.concurrent.ThreadLocalRandom;
 
 class Dot {
     private Pair<Integer, Integer> position, velocity, acceleration;
