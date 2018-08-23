@@ -1,17 +1,16 @@
 import java.awt.*;
 
 public class Goal {
-    private int windowWidth, windowHeight;
+    public Pair<Integer, Integer> position;
 
     Goal(int windowWidth, int windowHeight){
-        this.windowWidth = windowWidth;
-        this.windowHeight = windowHeight;
+        this.position = new Pair<>(windowWidth / 2, 25);
     }
 
     // Method for drawing the dot
     public void drawGoal(Graphics g) {
         g.setColor(Color.red);
-        g.fillOval(windowWidth/2, 25, 10, 10);
-        g.drawOval(windowWidth/2, 25, 10, 10);
+        g.fillOval(position.x(), position.y(), 10, 10);
+        g.drawOval(position.x(), position.y(), 10, 10);
     }
 }

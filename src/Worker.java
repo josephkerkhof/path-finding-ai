@@ -25,6 +25,8 @@ class Worker extends JFrame {
 
         // Animate the dots
         animateDots(numberOfDots, numberOfDirections);
+
+        determineDotsFitness();
     }
 
     @Override
@@ -64,6 +66,12 @@ class Worker extends JFrame {
             moveDots(numberOfDots);
             repaint();
             Thread.sleep(150);
+        }
+    }
+
+    public void determineDotsFitness() {
+        for(Dot dot : dots) {
+            dot.calculateFitness(goal.position);
         }
     }
 }

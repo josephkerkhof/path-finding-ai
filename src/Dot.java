@@ -6,6 +6,7 @@ class Dot {
     public boolean isDead;
     private int brainStep;
     private int windowWidth, windowHeight;
+    public int fitness;
 
     Dot(int numberOfDirections, int windowWidth, int windowHeight) {
         this.windowWidth = windowWidth;
@@ -145,5 +146,16 @@ class Dot {
         g.setColor(Color.black);
         g.fillOval(getPositionX(), getPositionY(), 5, 5);
         g.drawOval(getPositionX(), getPositionY(), 5, 5);
+    }
+
+    public void calculateFitness(Pair<Integer, Integer> goalPosition){
+        double distanceToGoal = calcDistanceToGoal(goalPosition);
+    }
+
+    private double calcDistanceToGoal(Pair<Integer, Integer> goalPosition) {
+        int distanceX = goalPosition.x() - position.x();
+        int distanceY = goalPosition.y() - position.y();
+        double distanceToGoal = Math.sqrt( Math.pow(distanceX, 2) + Math.pow(distanceY, 2) );
+        return distanceToGoal;
     }
 }
