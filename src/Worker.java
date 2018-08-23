@@ -53,7 +53,7 @@ class Worker extends JFrame {
     public void moveDots(int numberOfDots) {
         for (int i = 0; i < numberOfDots; i++) {
             dots[i].move();
-            if(dots[i].isOutsideOfBounds()) {
+            if(dots[i].isOutsideOfBounds() || dots[i].isOnLastMove()) {
                 dots[i].isDead = true;
             }
         }

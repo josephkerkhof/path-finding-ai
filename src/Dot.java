@@ -133,6 +133,13 @@ class Dot {
         return false;
     }
 
+    public boolean isOnLastMove() {
+        if(brainStep == brain.directions.length - 1) {
+            return true;
+        }
+        return false;
+    }
+
     // Method for drawing the dot
     public void drawDot(Graphics g) {
         g.setColor(Color.black);
