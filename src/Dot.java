@@ -10,7 +10,7 @@ class Dot {
     Dot(int numberOfDirections, int windowWidth, int windowHeight) {
         this.windowWidth = windowWidth;
         this.windowHeight = windowHeight;
-        this.position = new Pair<>(windowWidth / 2, windowHeight / 2);
+        this.position = new Pair<>(windowWidth / 2, windowHeight);
         this.velocity = new Pair<>(0, 0);
         this.acceleration = new Pair<>(0, 0);
         isDead = false;

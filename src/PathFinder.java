@@ -1,12 +1,12 @@
 import javax.swing.*;
 
 class PathFinder extends JFrame {
-    static Dot[] dots;
-
     public static void main(String[] args) throws InterruptedException{
         int numberOfDots = 500;
         int numberOfDirections = 400;
+        int windowWidth = 800;
+        int windowHeight = 800;
 
-        Worker w = new Worker(dots, numberOfDots, numberOfDirections);
+        Worker w = new Worker(numberOfDots, numberOfDirections, windowWidth, windowHeight);
     }
 }
