@@ -18,7 +18,7 @@ class Worker extends JFrame {
         this.goal = new Goal(windowWidth, windowHeight);
 
         // Create and show the window
-        this.setPreferredSize(new Dimension(800, 800));
+        this.setPreferredSize(new Dimension(windowWidth, windowHeight));
         this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -26,7 +26,7 @@ class Worker extends JFrame {
         // Animate the dots
         animateDots(numberOfDots, numberOfDirections);
 
-        determineDotsFitness();
+        runGeneticAlgorithm();
     }
 
     @Override
@@ -58,20 +58,37 @@ class Worker extends JFrame {
             if(dots[i].isOutsideOfBounds() || dots[i].isOnLastMove()) {
                 dots[i].isDead = true;
             }
+            if(dots[i].didReachGoal(goal)) {
+                dots[i].goalReached = true;
+            }
         }
     }
 
     public void animateDots(int numberOfDots, int numberOfDirections) throws InterruptedException {
         for (int i = 0; i < numberOfDirections; i++) {
+            if(checkIfAllDotsAreDead()) { break; } // if all the dots are dead, stop animating
             moveDots(numberOfDots);
             repaint();
             Thread.sleep(150);
         }
     }
 
+    private boolean checkIfAllDotsAreDead() {
+        for(Dot dot : dots) {
+            if(!dot.isDead) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void determineDotsFitness() {
         for(Dot dot : dots) {
             dot.calculateFitness(goal.position);
         }
+    }
+
+    public void runGeneticAlgorithm(){
+        determineDotsFitness();
     }
 }

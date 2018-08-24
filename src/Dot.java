@@ -3,18 +3,18 @@ import java.awt.*;
 class Dot {
     private Pair<Integer, Integer> position, velocity, acceleration;
     private Brain brain;
-    public boolean isDead;
-    private int brainStep;
-    private int windowWidth, windowHeight;
-    public int fitness;
+    public boolean isDead, goalReached;
+    private int windowWidth, windowHeight, brainStep;
+    public double fitness;
 
     Dot(int numberOfDirections, int windowWidth, int windowHeight) {
         this.windowWidth = windowWidth;
         this.windowHeight = windowHeight;
-        this.position = new Pair<>(windowWidth / 2, windowHeight);
+        this.position = new Pair<>(windowWidth / 2, windowHeight - 25);
         this.velocity = new Pair<>(0, 0);
         this.acceleration = new Pair<>(0, 0);
-        isDead = false;
+        this.isDead = false;
+        this.goalReached = false;
         this.brain = new Brain(numberOfDirections);
         this.brainStep = 0;
     }
@@ -95,7 +95,7 @@ class Dot {
     }
 
     public void move(){
-        if(isDead){ return; }
+        if(isDead || goalReached){ return; }
 
         int movementX = brain.directions[brainStep].x();
         int movementY = brain.directions[brainStep].y();
@@ -150,6 +150,7 @@ class Dot {
 
     public void calculateFitness(Pair<Integer, Integer> goalPosition){
         double distanceToGoal = calcDistanceToGoal(goalPosition);
+        fitness = 1.0 / Math.pow(distanceToGoal, 2);
     }
 
     private double calcDistanceToGoal(Pair<Integer, Integer> goalPosition) {
@@ -157,5 +158,16 @@ class Dot {
         int distanceY = goalPosition.y() - position.y();
         double distanceToGoal = Math.sqrt( Math.pow(distanceX, 2) + Math.pow(distanceY, 2) );
         return distanceToGoal;
+    }
+
+    public boolean didReachGoal(Goal goal) {
+        int goalXMin = goal.position.x() - 5;
+        int goalXMax = goal.position.x() + 5;
+        int goalYMin = goal.position.y() - 5;
+        int goalYMax = goal.position.y() + 5;
+        if((position.x() >= goalXMin && position.x() <= goalXMax) && (position.y() >= goalYMin && position.y() <= goalYMax)){
+            return true;
+        }
+        return false;
     }
 }
