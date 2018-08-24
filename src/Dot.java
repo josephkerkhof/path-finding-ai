@@ -2,12 +2,13 @@ import java.awt.*;
 
 class Dot {
     private Pair<Integer, Integer> position, velocity, acceleration;
-    private Brain brain;
+    public Brain brain;
     public boolean isDead, goalReached;
-    private int windowWidth, windowHeight, brainStep;
+    private int windowWidth, windowHeight, brainStep, numberOfDirections;
     public double fitness;
 
     Dot(int numberOfDirections, int windowWidth, int windowHeight) {
+        this.numberOfDirections = numberOfDirections;
         this.windowWidth = windowWidth;
         this.windowHeight = windowHeight;
         this.position = new Pair<>(windowWidth / 2, windowHeight - 25);
@@ -169,5 +170,11 @@ class Dot {
             return true;
         }
         return false;
+    }
+
+    public Dot gimmeBaby() {
+        Dot baby = new Dot(numberOfDirections, windowWidth, windowHeight);
+        baby.brain = brain.clone();
+        return baby;
     }
 }
