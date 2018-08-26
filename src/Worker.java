@@ -3,8 +3,9 @@ import java.util.Random;
 import javax.swing.*;
 
 class Worker extends JFrame {
-    static Dot[] dots;
-    static Goal goal;
+    Dot[] dots;
+    Goal goal;
+    private Obstacle[] obstacles;
     private static int windowWidth, windowHeight, numberOfDots, numberOfDirections;
     private int generation;
 
@@ -25,6 +26,9 @@ class Worker extends JFrame {
 
         // Make the goal
         this.goal = new Goal(windowWidth, windowHeight);
+
+        // Make the obstacles
+        this.obstacles = makeObstacles();
 
         // Create and show the window
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
@@ -48,6 +52,11 @@ class Worker extends JFrame {
         // Draws all the dots
         for (Dot dot : dots) {
             dot.drawDot(g);
+        }
+
+        // Draws all the obstacles
+        for (Obstacle obstacle : obstacles) {
+            obstacle.drawObstacles(g);
         }
     }
 
@@ -168,5 +177,13 @@ class Worker extends JFrame {
         for(Dot dot : dots) {
             dot.brain.mutate();
         }
+    }
+
+    private Obstacle[] makeObstacles() {
+        Obstacle[] obstacles = new Obstacle[1];
+
+        obstacles[0] = new Obstacle(0, 400, 400, 50);
+
+        return obstacles;
     }
 }
