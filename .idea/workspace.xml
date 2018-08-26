@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99fe27bf-7421-4e47-b880-88e07c784f9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PathFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PathFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worker.java" afterDir="false" />
@@ -19,25 +18,25 @@
     <session id="-1253624463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.3" value="7" />
-          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.3" value="8" />
+          <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
-          <entry key="java" value="14226" />
+          <entry key="java" value="14848" />
           <entry key="txt" value="270" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14226" />
+          <entry key="JAVA" value="14848" />
           <entry key="PLAIN_TEXT" value="286" />
         </counts>
       </usages-collector>
@@ -59,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/PathFinder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -67,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="152" selection-start-line="152" selection-end-line="152" />
+            <state relative-caret-position="112">
+              <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            <state relative-caret-position="232">
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
             </state>
           </provider>
         </entry>
@@ -97,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Brain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="540">
               <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
             </state>
           </provider>
@@ -116,6 +115,10 @@
     <findStrings>
       <find>frame</find>
       <find>draw</find>
+      <find>Fitness:</find>
+      <find>infinity</find>
+      <find>FitnessCalc:</find>
+      <find>FitnessCalc:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,10 +134,10 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Population.java" />
         <option value="$PROJECT_DIR$/src/Goal.java" />
-        <option value="$PROJECT_DIR$/src/Dot.java" />
         <option value="$PROJECT_DIR$/src/Brain.java" />
-        <option value="$PROJECT_DIR$/src/Worker.java" />
         <option value="$PROJECT_DIR$/src/PathFinder.java" />
+        <option value="$PROJECT_DIR$/src/Dot.java" />
+        <option value="$PROJECT_DIR$/src/Worker.java" />
       </list>
     </option>
   </component>
@@ -151,8 +154,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,7 +179,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534990530647" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535163628938" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -291,8 +294,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="808" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3018598" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3104435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,8 +305,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22206704" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39944133" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36871508" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.20530726" />
@@ -359,18 +363,6 @@
     <MESSAGE value="Functioning brain" />
     <option name="LAST_COMMIT_MESSAGE" value="Functioning brain" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Worker.java</url>
-          <line>152</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -392,22 +384,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Brain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="540">
           <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PathFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="232">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
         </state>
       </provider>
     </entry>
@@ -418,10 +403,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        <state relative-caret-position="112">
+          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

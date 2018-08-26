@@ -123,10 +123,12 @@ class Worker extends JFrame {
     }
 
     public void natualSelection() {
+        double fitnessSum = calcFitnessSum();
+
         Dot[] newDots = new Dot[dots.length];
         for(int i=0; i<newDots.length; i++) {
             // select parent based on fitness
-            Dot parent = selectParent();
+            Dot parent = selectParent(fitnessSum);
             // get baby from parent
             newDots[i] = parent.gimmeBaby();
         }
@@ -136,8 +138,7 @@ class Worker extends JFrame {
         this.generation++;
     }
 
-    public Dot selectParent() {
-        double fitnessSum = calcFitnessSum();
+    public Dot selectParent(double fitnessSum) {
         double runningSum = 0;
         Random random = new Random();
         double rand = 0 + (fitnessSum - 0) * random.nextDouble();
