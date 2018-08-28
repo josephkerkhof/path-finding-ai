@@ -73,7 +73,7 @@ class Worker extends JFrame {
     public void moveDots(int numberOfDots) {
         for (int i = 0; i < numberOfDots; i++) {
             dots[i].move();
-            if(dots[i].isOutsideOfBounds() || dots[i].isOnLastMove()) {
+            if(dots[i].isOutsideOfBounds() || dots[i].isOnLastMove() || dots[i].didRunIntoObstacle(obstacles)) {
                 dots[i].isDead = true;
             }
             if(dots[i].didReachGoal(goal)) {

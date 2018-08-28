@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Obstacle {
-    private int obstacleX, obstacleY, width, height;
+    public int obstacleX, obstacleY, width, height;
 
     Obstacle(int obstacleX, int obstacleY, int width, int height) {
         this.obstacleX = obstacleX;

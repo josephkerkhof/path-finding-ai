@@ -135,6 +135,24 @@ class Dot {
         return false;
     }
 
+    public boolean didRunIntoObstacle(Obstacle[] obstacles) {
+        int currentX = getPositionX();
+        int currentY = getPositionY();
+
+        for(Obstacle obstacle : obstacles) {
+            int lowerX = obstacle.obstacleX;
+            int upperX = lowerX + obstacle.width;
+            int lowerY = obstacle.obstacleY;
+            int upperY = lowerY + obstacle.height;
+
+            if(currentX >= lowerX && currentX <= upperX && currentY >= lowerY && currentY <= upperY) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public boolean isOnLastMove() {
         if(brainStep == brain.directions.length - 1) {
             return true;
