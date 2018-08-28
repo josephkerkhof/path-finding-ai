@@ -4,7 +4,7 @@ A simple path finding artificial intelligence with a genetic algorithm. Each gen
 
 ## Preview
 
-![Path-finding Genetic Algorithm](https://imgur.com/7JuCqIH)
+![Path-finding Genetic Algorithm on generation 5](https://i.imgur.com/7JuCqIH.png)
 
 ## Fitness function
 
