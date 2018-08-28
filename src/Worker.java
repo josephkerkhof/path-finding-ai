@@ -106,23 +106,7 @@ class Worker extends JFrame {
         }
     }
 
-    // Returns the index of the best dot from the current generation
-    public int findFittestDot() {
-        int bestDotIndex = -1;
-        double bestDotFitness = Double.MAX_VALUE;
-        for(int i=0; i<dots.length; i++) {
-            if(dots[i].fitness < bestDotFitness) {
-                bestDotFitness = dots[i].fitness;
-                bestDotIndex = i;
-            }
-        }
-        return bestDotIndex;
-    }
-
     public void runGeneticAlgorithm() throws InterruptedException {
-//        determineDotsFitness();
-//        int fittestDot = findFittestDot();
-
         while(true) {
             // Animate the dots
             animateDots(numberOfDots, numberOfDirections);
