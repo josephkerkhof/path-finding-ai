@@ -1,6 +1,4 @@
-import javax.swing.*;
-
-class PathFinder extends JFrame {
+class PathFinder {
     public static void main(String[] args) throws InterruptedException{
         int numberOfDots = 500;
         int numberOfDirections = 200;

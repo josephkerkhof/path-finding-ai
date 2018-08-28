@@ -168,8 +168,12 @@ class Dot {
     }
 
     public void calculateFitness(Pair<Integer, Integer> goalPosition){
-        double distanceToGoal = calcDistanceToGoal(goalPosition);
-        fitness = 1.0 / Math.pow(distanceToGoal, 2);
+        if(goalReached){
+            fitness = 1.0 / 16.0 + 10000.0 / Math.pow(brainStep, 2);
+        } else {
+            double distanceToGoal = calcDistanceToGoal(goalPosition);
+            fitness = 1.0 / Math.pow(distanceToGoal, 2);
+        }
         if(fitness == Double.POSITIVE_INFINITY) {
             fitness = 1;
         }
