@@ -2,7 +2,9 @@
 
 A simple path finding artificial intelligence with a genetic algorithm. Each generation improves on the last generation by taking best and mutating it a little for the following generation.
 
-## Preview
+## Details
+
+Dots "die" when they run into the edge of the screen or when they hit an obstacle. Dots "succeed" when they run into the red goal dot at the top of the screen. See an example in the screenshot below.
 
 ![Path-finding Genetic Algorithm on generation 5](https://i.imgur.com/7JuCqIH.png)
 
@@ -21,3 +23,7 @@ public void calculateFitness(Pair<Integer, Integer> goalPosition){
     }
 }
 ```
+
+## Credits
+
+A simple path finding artificial intelligence with genetic algorithm based on the tutorial originally written in Processing by [CodeBullet](https://github.com/Code-Bullet/Smart-Dots-Genetic-Algorithm-Tutorial).
