@@ -44,6 +44,7 @@ class Worker extends JFrame {
         super.paint(g);
 
         // Draw the generation counter text
+	g.setFont(new Font("TimesRoman", Font.PLAIN, 50));
         g.drawString("Generation: " + this.generation, 50, 50);
 
         // Draws the goal
@@ -164,9 +165,21 @@ class Worker extends JFrame {
     }
 
     private Obstacle[] makeObstacles() {
-        Obstacle[] obstacles = new Obstacle[1];
+	// adjust the array length to be the number of obstacles you want.
+	int numObstacles = 1;
+        Obstacle[] obstacles = new Obstacle[numObstacles];
 
+	// the first obstacle
         obstacles[0] = new Obstacle(0, 400, 400, 50);
+
+	// the second obstacle
+	// uncomment these if you want to use them in the course
+	//int obstacle2Width = 400;
+        //obstacles[1] = new Obstacle(this.windowWidth - obstacle2Width, 600, obstacle2Width, 50);
+
+	// the third obstacle
+	//int obstacle3Width = 200;
+        //obstacles[2] = new Obstacle(300, 200, obstacle3Width, 50);
 
         return obstacles;
     }
